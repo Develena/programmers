@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 /**
- * 완주하지 못한 선수.
+ *  Hash Lv1. 완주하지 못한 선수.
  */
 public class Player {
 
