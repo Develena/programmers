@@ -35,7 +35,27 @@ public class Player {
     answer = participant[completion.length];
     return answer;
 
-
   }
+
+  public static String solution2(String[] participant, String[] completion) {
+    String answer = "";
+
+    HashMap<String, Integer> hm = new HashMap<>();
+    for (int i = 0; i < participant.length; i++) {
+      hm.put(participant[i], hm.getOrDefault(participant[i], 0) + 1);
+    }
+    for (int i = 0; i < completion.length; i++) {
+      hm.put(completion[i], hm.get(completion[i])-1);
+    }
+
+    for(String key : hm.keySet()){
+      if(hm.get(key) != 0){
+        answer = key;
+      }
+    }
+
+    return answer;
+  }
+
 
 }
